@@ -3,19 +3,12 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import ru.yandex.praktikum.Account;
 
-
-import java.util.Collections;
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class AccountTest
-{
-
+public class AccountTest {
     private final String name;
     private final boolean expected;
-
-
 
     public AccountTest(String name, boolean expected) {
         this.name = name;
@@ -43,7 +36,7 @@ public class AccountTest
                 {" ТимотиШаламе", false},
                 {"ТимотиШаламе ", false},
                 {" ", false},
-                {String.valueOf(Collections.EMPTY_LIST), false},// передали тестовые данные
+                {null, false},// передали тестовые данные
         };
     }
 

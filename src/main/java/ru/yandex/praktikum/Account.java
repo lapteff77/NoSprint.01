@@ -12,19 +12,26 @@ public class Account {
     public boolean checkNameToEmboss() {
         if (name == null) { // проверяет, не передано ли значение null
             return false;
-        } else if (name.isEmpty()) { // проверяет, не пустая ли строка
+        }
+        if (name.isEmpty()) { // проверяет, не пустая ли строка
             return false;
-        } else if (name.isBlank()) { // проверяет, не состоит ли строка из пробелов
+        }
+        if (name.isBlank()) { // проверяет, не состоит ли строка из пробелов
             return false;
-        } else if (name.startsWith(" ")) { // проверяет, не начинается ли строка из пробела
+        }
+        if (name.startsWith(" ")) { // проверяет, не начинается ли строка из пробела
             return false;
-        } else if (name.endsWith(" ")) { // проверяет, не заканчивается ли строка пробелом
+        }
+        if (name.endsWith(" ")) { // проверяет, не заканчивается ли строка пробелом
             return false;
-        } else if (name.length() > 19) { // проверка длины строки (не более 19 символов)
+        }
+        if (name.length() > 19) { // проверка длины строки (не более 19 символов)
             return false;
-        } else if (name.length() < 3) { // проверка длины строки (не менее 3 символов)
+        }
+        if (name.length() < 3) { // проверка длины строки (не менее 3 символов)
             return false;
-        } else if (name.contains(" ")) {
+        }
+        if (name.contains(" ")) {
             {
                 for (int i = 0; i < name.length(); i++) {
                     spaces += (Character.isWhitespace(name.charAt(i))) ? 1 : 0;
